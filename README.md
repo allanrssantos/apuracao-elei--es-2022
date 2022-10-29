@@ -1,27 +1,15 @@
-# ApuracaoEle2022
+# Apuração 2º Turno Eleição - Presidente e Governador de SP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+O projeto foi desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
-## Development server
+## Dados do projeto.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Nesse projeto estou consumindo a API oficial do [TSE](https://www.tse.jus.br/eleicoes/eleicoes-2022/interessados-na-divulgacao-de-resultados-2022) e tratando os dados para utiliza-los.
 
-## Code scaffolding
+Estou utilizando [Angular Material](https://material.angular.io/) e [NGX Charts](https://swimlane.gitbook.io/ngx-charts/) para apresentação dos dados no template.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esse projeto não é para interação do usuário, ele apenas apresenta os dados e os atualiza a cada 30s, mas o retorno de novos dados depende do TSE.
 
-## Build
+Para tutilização clone o repositório e instale as dependências do projeto `npm instal`, após a instalção use o comando `ng s --o` para rodar o projeto. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Observação importante: Os dados só serão apresentados no Templete após o TSE iniciar a divulgação do resultado.

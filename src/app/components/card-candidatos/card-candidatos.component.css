@@ -1,0 +1,68 @@
+
+section {
+  display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+
+}
+
+.card {
+  width: 282px;
+  height: 115px;
+  margin: 10px;
+  position: relative;
+  border-left: 3px solid red;
+}
+
+.cardpl{
+  width: 282px;
+  height: 115px;
+  margin: 10px;
+  position: relative;
+  border-left: 3px solid blue;
+}
+
+.cardenaoleito {
+  display: none;
+}
+
+h2 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.content {
+  text-align: end;
+}
+
+.mat-card-avatar {
+  height: 50px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.mat-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.naoeleito {
+  display: none;
+}
+
+.eleito {
+  background-color: green;
+    width: 23%;
+    height: 28px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+}

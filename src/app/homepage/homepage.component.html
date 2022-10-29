@@ -1,0 +1,34 @@
+<app-header [apuracao]="apuracao" [apuracaoGov]="apuracaoGov"></app-header>
+<div class="container">
+  <ng-container *ngIf="candidatos.length > 0">
+    <app-card-candidatos [candidateList]="candidatos"></app-card-candidatos>
+  </ng-container>
+  <ng-container *ngIf="candidatosGov.length > 0">
+    <app-card-candidatos [candidateListGov]="candidatosGov"></app-card-candidatos>
+  </ng-container>
+</div>
+<ng-container>
+  <mat-card>
+    <div id="pie-chart-parent">
+      <ngx-charts-bar-horizontal
+        [showDataLabel]="showDataLabel"
+        [showGridLines]="showGridLines"
+        [scheme]="colorScheme"
+        [results]="single"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [barPadding]="barPadding"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+      >
+      </ngx-charts-bar-horizontal>
+    </div>
+  </mat-card>
+</ng-container>

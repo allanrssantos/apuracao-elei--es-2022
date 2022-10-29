@@ -1,0 +1,22 @@
+.mat-card {
+  width: 1308px;
+  height: 50%;
+  padding: 10px;
+  margin: 10px;
+  border-left: 3px solid #AAAAAA;
+}
+
+#pie-chart-parent {
+  display: grid;
+  height: 100%;
+}
+
+.container{
+  display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+
+}
