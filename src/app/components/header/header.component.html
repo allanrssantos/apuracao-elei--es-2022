@@ -1,12 +1,16 @@
 <section *ngIf="apuracao">
   <mat-card class="card">
     <mat-card-header>
-      <mat-card-title>APURAÇÃO ELEIÇÕES 2022 - 2º TURNO - PRESIDENTE <span>{{apuracao.psa}} %</span> SEÇÕES APURADAS - GOVERNADOR - SP <span>{{apuracaoGov.psa}} %</span> SEÇÕES APURADAS</mat-card-title>
+      <mat-card-title
+        >APURAÇÃO ELEIÇÕES 2022 - 2º TURNO - PRESIDENTE
+        <span>{{ apuracao.psa }} %</span> SEÇÕES APURADAS - GOVERNADOR - SP
+        <span>{{ apuracaoGov.psa }} %</span> SEÇÕES APURADAS</mat-card-title
+      >
     </mat-card-header>
     <div class="atualization">
-    <i class="material-icons">computer</i> <mat-progress-bar mode="buffer"></mat-progress-bar> <i class="material-icons">dns</i>
-  </div>
+      <i class="material-icons">computer</i>
+      <mat-progress-bar mode="buffer"></mat-progress-bar>
+      <i class="material-icons">dns</i>
+    </div>
   </mat-card>
 </section>
-
-

@@ -7,17 +7,15 @@ import { Candidatos } from './../shared/models/candidatos';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.css'],
 })
 export class HomepageComponent implements OnInit {
-
   // variáveis
   apuracao!: Apuracao;
   apuracaoGov!: Apuracao;
   candidatos: Candidatos[] = [];
   candidatosGov: Candidatos[] = [];
   single!: any[] | any;
-
 
   // opções do gráfico
   showXAxis: boolean = true;
@@ -35,8 +33,7 @@ export class HomepageComponent implements OnInit {
     domain: ['#AAAAAA', '#AAAAAA', '#AAAAAA', '#AAAAAA', '#AAAAAA'],
   };
 
-
-  constructor(private apuracaoService: ApuracaoService) { }
+  constructor(private apuracaoService: ApuracaoService) {}
 
   ngOnInit() {
     this.presidentList();
@@ -52,12 +49,12 @@ export class HomepageComponent implements OnInit {
           this.apuracao = apuracao;
           this.resultado();
           return apuracao.cand;
-        }),
+        })
       )
-      .subscribe( (response: Candidatos) => {
+      .subscribe((response: Candidatos) => {
         this.candidatos.push(response);
         return this.candidatos;
-      })
+      });
   }
 
   private governadorList() {
@@ -67,44 +64,44 @@ export class HomepageComponent implements OnInit {
         switchMap((apuracao: Apuracao) => {
           this.apuracaoGov = apuracao;
           return apuracao.cand;
-        }),
+        })
       )
-      .subscribe( (response: Candidatos) => {
+      .subscribe((response: Candidatos) => {
         this.candidatosGov.push(response);
         return this.candidatosGov;
-      })
+      });
   }
 
-  refresh () {
-    window.setTimeout( () => {
+  refresh() {
+    window.setTimeout(() => {
       location.reload();
     }, 30000);
   }
 
-  resultado(){
+  resultado() {
     var single = [
       {
-        "name": "BRANCOS",
-        "value": this.apuracao.vb
+        name: 'BRANCOS',
+        value: this.apuracao.vb,
       },
       {
-        "name": "NULOS",
-        "value": this.apuracao.tvn
+        name: 'NULOS',
+        value: this.apuracao.tvn,
       },
       {
-        "name": "ABSTENÇÕES",
-        "value": this.apuracao.a
+        name: 'ABSTENÇÕES',
+        value: this.apuracao.a,
       },
       {
-        "name": "VÁLIDOS",
-        "value": this.apuracao.vv
+        name: 'VÁLIDOS',
+        value: this.apuracao.vv,
       },
       {
-        "name": "COMPARECIMENTO",
-        "value": this.apuracao.c
+        name: 'COMPARECIMENTO',
+        value: this.apuracao.c,
       },
     ];
-    return Object.assign(this, { single })
+    return Object.assign(this, { single });
   }
 
   onSelect(event: any): void {
@@ -117,6 +114,5 @@ export class HomepageComponent implements OnInit {
 
   onDeactivate(event: any): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(event)));
-
   }
 }

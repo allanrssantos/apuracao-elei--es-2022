@@ -4,7 +4,9 @@
     <app-card-candidatos [candidateList]="candidatos"></app-card-candidatos>
   </ng-container>
   <ng-container *ngIf="candidatosGov.length > 0">
-    <app-card-candidatos [candidateListGov]="candidatosGov"></app-card-candidatos>
+    <app-card-candidatos
+      [candidateListGov]="candidatosGov"
+    ></app-card-candidatos>
   </ng-container>
 </div>
 <ng-container>

@@ -1,44 +1,87 @@
 <div>
-<section>
-  <div *ngFor="let presidente of candidateList">
-  <mat-card [ngClass]="{'card': presidente.nm === 'LULA', 'cardpl': presidente.nm === 'JAIR BOLSONARO', 'cardenaoleito': presidente.e === 'n'}">
-    <mat-card-header>
-      <img mat-card-avatar src="https://resultados.tse.jus.br/oficial/ele2022/544/fotos/br/{{presidente.sqcand}}.jpeg">
-      <mat-card-title>{{ presidente.nm }}</mat-card-title>
-      <mat-card-subtitle *ngIf="presidente.nm === 'LULA'">{{ presidente.n }} - PT</mat-card-subtitle>
-      <mat-card-subtitle *ngIf="presidente.nm === 'JAIR BOLSONARO'">{{ presidente.n }} - PARTIDO LIBERAL</mat-card-subtitle>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <p [ngClass]="{'naoeleito': presidente.e === 'n', 'eleito': presidente.e === 's'}"><STRONG>ELEITO</STRONG></p>
-      <div class="content">
-        <h2>{{ presidente.pvap }}%</h2>
-        <p>{{ presidente.vap | mask: 'separator':'.' }} VOTOS</p>
-      </div>
-    </mat-card-content>
-  </mat-card>
+  <section>
+    <div *ngFor="let presidente of candidateList">
+      <mat-card
+        [ngClass]="{
+          card: presidente.nm === 'LULA',
+          cardpl: presidente.nm === 'JAIR BOLSONARO',
+          cardenaoleito: presidente.e === 'n'
+        }"
+      >
+        <mat-card-header>
+          <img
+            mat-card-avatar
+            src="https://resultados.tse.jus.br/oficial/ele2022/544/fotos/br/{{
+              presidente.sqcand
+            }}.jpeg"
+          />
+          <mat-card-title>{{ presidente.nm }}</mat-card-title>
+          <mat-card-subtitle *ngIf="presidente.nm === 'LULA'"
+            >{{ presidente.n }} - PT</mat-card-subtitle
+          >
+          <mat-card-subtitle *ngIf="presidente.nm === 'JAIR BOLSONARO'"
+            >{{ presidente.n }} - PARTIDO LIBERAL</mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <p
+            [ngClass]="{
+              naoeleito: presidente.e === 'n',
+              eleito: presidente.e === 's'
+            }"
+          >
+            <STRONG>ELEITO</STRONG>
+          </p>
+          <div class="content">
+            <h2>{{ presidente.pvap }}%</h2>
+            <p>{{ presidente.vap | mask: "separator":"." }} VOTOS</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section>
+    <div *ngFor="let governador of candidateListGov">
+      <mat-card
+        [ngClass]="{
+          card: governador.nm === 'FERNANDO HADDAD',
+          cardpl: governador.nm === 'TARCÍSIO',
+          cardenaoleito: governador.e === 'n'
+        }"
+      >
+        <mat-card-header>
+          <img
+            mat-card-avatar
+            src="https://resultados.tse.jus.br/oficial/ele2022/546/fotos/sp/{{
+              governador.sqcand
+            }}.jpeg"
+          />
+          <mat-card-title>{{ governador.nm }}</mat-card-title>
+          <mat-card-subtitle *ngIf="governador.nm === 'FERNANDO HADDAD'"
+            >{{ governador.n }} - PT</mat-card-subtitle
+          >
+          <mat-card-subtitle *ngIf="governador.nm === 'TARCÍSIO'"
+            >{{ governador.n }} - REPUBLICANOS</mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <p
+            [ngClass]="{
+              naoeleito: governador.e === 'n',
+              eleito: governador.e === 's'
+            }"
+          >
+            <STRONG>ELEITO</STRONG>
+          </p>
+          <div class="content">
+            <h2>{{ governador.pvap }}%</h2>
+            <p>{{ governador.vap | mask: "separator":"." }} VOTOS</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
 </div>
-</section>
-
-<section>
-  <div *ngFor="let governador of candidateListGov">
-  <mat-card [ngClass]="{'card': governador.nm === 'FERNANDO HADDAD', 'cardpl': governador.nm === 'TARCÍSIO', 'cardenaoleito': governador.e === 'n'}">
-    <mat-card-header>
-      <img mat-card-avatar src="https://resultados.tse.jus.br/oficial/ele2022/546/fotos/sp/{{governador.sqcand}}.jpeg">
-      <mat-card-title>{{ governador.nm }}</mat-card-title>
-      <mat-card-subtitle *ngIf="governador.nm === 'FERNANDO HADDAD'">{{ governador.n }} - PT</mat-card-subtitle>
-      <mat-card-subtitle *ngIf="governador.nm === 'TARCÍSIO'">{{ governador.n }} - REPUBLICANOS</mat-card-subtitle>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <p [ngClass]="{'naoeleito': governador.e === 'n', 'eleito': governador.e === 's'}"><STRONG>ELEITO</STRONG></p>
-      <div class="content">
-        <h2>{{ governador.pvap }}%</h2>
-        <p>{{ governador.vap | mask: 'separator':'.' }} VOTOS</p>
-      </div>
-    </mat-card-content>
-  </mat-card>
-</div>
-</section>
-
-

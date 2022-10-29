@@ -6,7 +6,7 @@ import { CardCandidatosModule } from '../components/card-candidatos/card-candida
 import { HomepageComponent } from './homepage.component';
 import { HeaderModule } from '../components/header/header.module';
 import { MatCardModule } from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { FormsModule } from '@angular/forms';
 
@@ -18,11 +18,11 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     NgxChartsModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
   ],
   declarations: [HomepageComponent],
   exports: [HomepageComponent],
   providers: [ApuracaoService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomepageModule { }
+export class HomepageModule {}

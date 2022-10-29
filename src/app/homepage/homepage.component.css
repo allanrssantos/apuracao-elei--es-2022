@@ -3,7 +3,7 @@
   height: 50%;
   padding: 10px;
   margin: 10px;
-  border-left: 3px solid #AAAAAA;
+  border-left: 3px solid #aaaaaa;
 }
 
 #pie-chart-parent {
@@ -11,12 +11,11 @@
   height: 100%;
 }
 
-.container{
+.container {
   display: inline-flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: space-between;
-
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
 }
