@@ -1,12 +1,10 @@
-
 section {
   display: inline-flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: space-between;
-
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
 }
 
 .card {
@@ -17,16 +15,12 @@ section {
   border-left: 3px solid red;
 }
 
-.cardpl{
+.cardpl {
   width: 282px;
   height: 115px;
   margin: 10px;
   position: relative;
   border-left: 3px solid blue;
-}
-
-.cardenaoleito {
-  display: none;
 }
 
 h2 {
@@ -58,11 +52,11 @@ h2 {
 
 .eleito {
   background-color: green;
-    width: 23%;
-    height: 28px;
-    border-radius: 50%;
-    align-items: center;
-    text-align: center;
-    padding-top: 8px;
-    color: white;
+  width: 23%;
+  height: 28px;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  padding-top: 8px;
+  color: white;
 }
