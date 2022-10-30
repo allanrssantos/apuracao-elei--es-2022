@@ -47,7 +47,14 @@ h2 {
 }
 
 .naoeleito {
-  display: none;
+  background-color: white;
+  width: 23%;
+  height: 28px;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  padding-top: 8px;
+  color: white;
 }
 
 .eleito {
